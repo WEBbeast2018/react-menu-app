@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 
-const MenuItem = () => (
-  <li>Menu item
-  </li>
+const MenuItem = (props) => (
+  <li>{props.item}</li>
 );
 
 
@@ -19,10 +18,10 @@ const Menu = () => (
   <div>
     <h2>Menu</h2>
     <ul>
-      <MenuItem/>
-      <MenuItem/>
-      <MenuItem/>
-      <MenuItem/>
+      <MenuItem item='Coffee'/>
+      <MenuItem item='Milkshake'/>
+      <MenuItem item='Omelet'/>
+      <MenuItem item='Pasta'/>
     </ul>
   </div>
 );
