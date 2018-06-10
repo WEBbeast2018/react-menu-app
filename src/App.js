@@ -14,9 +14,9 @@ const AddMenuItem = () => (
   </div>
 );
 
-const Menu = () => (
+const Menu = (props) => (
   <div>
-    <h2>Menu</h2>
+    <h2>{props.title}</h2>
     <ul>
       <MenuItem item='Coffee'/>
       <MenuItem item='Milkshake'/>
@@ -28,11 +28,18 @@ const Menu = () => (
 
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      menuTitle: 'Cafe JS Menu'
+    }
+  }
   render() {
     return (
       <div className="App">
         <AddMenuItem/>
-        <Menu/>
+        <Menu title={this.state.menuTitle}/>
       </div>
     );
   }
