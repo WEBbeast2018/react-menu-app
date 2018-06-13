@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 export class AddMenuItem extends Component {
   constructor(props) {
@@ -23,3 +24,7 @@ export class AddMenuItem extends Component {
     )
   }
 }
+
+// AddRecipe.propTypes = {
+//   addRecipe: PropTypes.func.isRequired
+// };
