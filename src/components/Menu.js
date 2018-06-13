@@ -1,14 +1,18 @@
 import React from 'react';
 import {MenuItem} from './MenuItem';
 
+function styleByIndex(value) {
+  return (value%2 === 1) ? 'red' : 'green'
+}
+
 export const Menu = ({title, items}) => (
   <div>
     <h2>{title}</h2>
     <ul>
-      <MenuItem item={items[0]}/>
-      <MenuItem item={items[1]}/>
-      <MenuItem item={items[2]}/>
-      <MenuItem item={items[3]}/>
+      {
+        items.map((item, index) =>
+          <MenuItem item={item} itemStyle={styleByIndex(index)}/>)
+      }
     </ul>
   </div>
 );

@@ -8,3 +8,11 @@ body {
 h2, ol, ul {
   text-align: left;
 }
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
