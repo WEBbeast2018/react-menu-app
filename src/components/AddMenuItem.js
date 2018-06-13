@@ -4,13 +4,8 @@ export class AddMenuItem extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this)
-    this.setRef = this.setRef.bind(this)
   }
 
-  setRef(myRef) {
-    this.myRef = myRef;
-    console.log('myRef', this.myRef)
-  }
   onSubmit(e) {
     e.preventDefault();
     this.props.addItem(this.myRef.value);
@@ -20,9 +15,9 @@ export class AddMenuItem extends Component {
 
   render() {
     return (
-      <form onSubmit={ this.onSubmit }>
+      <form onSubmit={ this.onSubmit.bind(this) }>
         <h2>Add New Item</h2>
-        <input ref={ this.setRef}/>
+        <input ref={ ref => this.myRef = ref }/>
         <button>Add</button>
       </form>
     )

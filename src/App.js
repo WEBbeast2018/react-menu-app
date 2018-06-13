@@ -20,7 +20,6 @@ class App extends Component {
 
   addItem = (newItem) => {
     const newMenuItems = this.state.menuItems.concat(newItem);
-
     this.setState({menuItems: newMenuItems});
   };
 
