@@ -25,6 +25,6 @@ export class AddMenuItem extends Component {
   }
 }
 
-// AddRecipe.propTypes = {
-//   addRecipe: PropTypes.func.isRequired
-// };
+AddMenuItem.propTypes = {
+  addItem: PropTypes.func.isRequired
+};
