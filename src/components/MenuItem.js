@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const MenuItem = (props) => (
-  <li className={props.itemStyle}>{props.item}</li>
+export const MenuItem = ({item, itemStyle}) => (
+  <li className={itemStyle}>{item}</li>
 );
