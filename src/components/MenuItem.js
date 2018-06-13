@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const MenuItem = (props) => (
-  <li>{props.item}</li>
+export const MenuItem = ({item}) => (
+  <li>{item}</li>
 );

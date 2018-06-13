@@ -1,14 +1,14 @@
 import React from 'react';
 import {MenuItem} from './MenuItem';
 
+// Note: this will work, but with no keys, console will show error
+// Using keys in react is important performance-wise
 export const Menu = ({title, items}) => (
   <div>
     <h2>{title}</h2>
     <ul>
-      <MenuItem item={items[0]}/>
-      <MenuItem item={items[1]}/>
-      <MenuItem item={items[2]}/>
-      <MenuItem item={items[3]}/>
+      {items.map(item => <MenuItem item={item}/>)}
     </ul>
   </div>
 );
+
