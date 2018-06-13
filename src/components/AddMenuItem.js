@@ -7,6 +7,3 @@ export const AddMenuItem = () => (
     <button>Add</button>
   </div>
 );
-
-// You can instead export like this:
-// export default AddMenuItem;

@@ -5,13 +5,10 @@ export const Menu = (props) => (
   <div>
     <h2>{props.title}</h2>
     <ul>
-      <MenuItem item='Coffee'/>
-      <MenuItem item='Milkshake'/>
-      <MenuItem item='Omelet'/>
-      <MenuItem item='Pasta'/>
+      <MenuItem item={props.items[0]}/>
+      <MenuItem item={props.items[1]}/>
+      <MenuItem item={props.items[2]}/>
+      <MenuItem item={props.items[3]}/>
     </ul>
   </div>
 );
-
-// You can instead export like this:
-// export default Menu;

@@ -8,14 +8,20 @@ class App extends Component {
     super();
 
     this.state = {
-      menuTitle: 'Cafe JS Menu'
+      menuTitle: 'Cafe JS Menu',
+      menuItems: [
+        'Coffee',
+        'Milkshake',
+        'Omelet',
+        'Pasta'
+      ]
     }
   }
   render() {
     return (
       <div className="App">
         <AddMenuItem/>
-        <Menu title={this.state.menuTitle}/>
+        <Menu title={this.state.menuTitle} items={this.state.menuItems}/>
       </div>
     );
   }
