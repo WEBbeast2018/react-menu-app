@@ -17,10 +17,17 @@ class App extends Component {
       ]
     }
   }
+
+  addItem = (newItem) => {
+    const newMenuItems = this.state.menuItems.concat(newItem);
+
+    this.setState({menuItems: newMenuItems});
+  };
+
   render() {
     return (
       <div className="App">
-        <AddMenuItem/>
+        <AddMenuItem addItem={this.addItem}/>
         <Menu title={this.state.menuTitle} items={this.state.menuItems}/>
       </div>
     );
