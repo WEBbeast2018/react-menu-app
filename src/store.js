@@ -5,7 +5,7 @@ const reducer = (state, action) => {
 
   switch (action.type) {
     case 'ADD_ITEM':
-      return null;
+      return {...state, items: state.items.concat(action.payload) };
 
     default:
       return state;
@@ -13,7 +13,12 @@ const reducer = (state, action) => {
 };
 
 const initialState = {
-  items: []
+  items: [
+    'Coffee',
+    'Milkshake',
+    'Omelet',
+    'Pasta'
+  ]
 };
 
 const store = createStore(reducer, initialState);
