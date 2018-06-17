@@ -15,6 +15,7 @@ const Menu = ({title, items}) => (
 
 
 const mapStateToProps = (state) => ({
+  title: state.title,
   items: state.items
 });
 

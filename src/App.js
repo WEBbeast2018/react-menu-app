@@ -6,10 +6,6 @@ import Menu from './components/Menu';
 class App extends Component {
   constructor() {
     super();
-
-    this.state = {
-      menuTitle: 'Cafe JS Menu'
-    }
   }
 
   addItem = (newItem) => {
@@ -21,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <AddMenuItem addItem={this.addItem}/>
-        <Menu title={this.state.menuTitle} items={this.state.menuItems}/>
+        <Menu />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 
-const reducer = (state, action) => {
+const menuReducer = (state, action) => {
   console.log('Got Action ' + action.type, action);
 
   switch (action.type) {
@@ -13,6 +13,7 @@ const reducer = (state, action) => {
 };
 
 const initialState = {
+  title: 'Cafe JS Menu',
   items: [
     'Coffee',
     'Milkshake',
@@ -21,7 +22,7 @@ const initialState = {
   ]
 };
 
-const store = createStore(reducer, initialState);
+const store = createStore(menuReducer, initialState);
 
 // for dev purpose only
 window.store = store;
