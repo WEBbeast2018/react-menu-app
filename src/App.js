@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <AddMenuItem addItem={this.addItem}/>
-        <Menu title={this.state.menuTitle} items={this.state.menuItems}/>
+        <Menu title={this.state.menuTitle}/>
       </div>
     );
   }
