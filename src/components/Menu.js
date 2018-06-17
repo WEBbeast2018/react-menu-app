@@ -1,9 +1,10 @@
 import React from 'react';
 import {MenuItem} from './MenuItem';
+import {connect} from 'react-redux';
 
 // Note: this will work, but with no keys, console will show error
 // Using keys in react is important performance-wise
-export const Menu = ({title, items}) => (
+const Menu = ({title, items}) => (
   <div>
     <h2>{title}</h2>
     <ul>
@@ -12,3 +13,9 @@ export const Menu = ({title, items}) => (
   </div>
 );
 
+
+const mapStateToProps = (state) => ({
+  items: state.items
+});
+
+export default connect(mapStateToProps)(Menu);
