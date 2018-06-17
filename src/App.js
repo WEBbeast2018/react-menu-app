@@ -8,15 +8,9 @@ class App extends Component {
     super();
   }
 
-  // addItem = (newItem) => {
-  // const newMenuItems = this.state.menuItems.concat(newItem);
-  // this.setState({menuItems: newMenuItems});
-  // };
-
   render() {
     return (
       <div className="App">
-        {/*<AddMenuItem addItem={this.addItem}/>*/}
         <AddMenuItem/>
         <Menu/>
       </div>

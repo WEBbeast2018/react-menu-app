@@ -31,9 +31,9 @@ AddMenuItem.propTypes = {
 };
 
 const mapDispatchToProps = {
-  addItem: () => ({
+  addItem: (payload) => ({
     type: 'ADD_ITEM',
-    payload: 'Some Payload'
+    payload: payload
   })
 };
 export default connect(null, mapDispatchToProps)(AddMenuItem);
