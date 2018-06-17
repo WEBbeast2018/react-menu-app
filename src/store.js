@@ -23,6 +23,7 @@ const initialState = {
 
 const store = createStore(reducer, initialState);
 
+// for dev purpose only
 window.store = store;
 
 export default store;
