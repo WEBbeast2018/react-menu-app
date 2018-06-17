@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 
-export class AddMenuItem extends Component {
+class AddMenuItem extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this)
@@ -28,3 +29,11 @@ export class AddMenuItem extends Component {
 AddMenuItem.propTypes = {
   addItem: PropTypes.func.isRequired
 };
+
+const mapDispatchToProps = {
+  addItem: () => ({
+    type: 'ADD_ITEM',
+    payload: 'Some Payload'
+  })
+};
+export default connect(null, mapDispatchToProps)(AddMenuItem);
