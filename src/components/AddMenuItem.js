@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {addItem} from '../state/menu/menu.actions';
 
 class AddMenuItem extends Component {
   constructor(props) {
@@ -31,9 +32,6 @@ AddMenuItem.propTypes = {
 };
 
 const mapDispatchToProps = {
-  addItem: (payload) => ({
-    type: 'ADD_ITEM',
-    payload: payload
-  })
+  addItem: addItem
 };
 export default connect(null, mapDispatchToProps)(AddMenuItem);

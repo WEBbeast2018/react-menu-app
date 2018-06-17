@@ -1,5 +1,7 @@
 import { createStore } from 'redux';
 
+
+
 const menuReducer = (state, action) => {
   console.log('Got Action ' + action.type, action);
 
